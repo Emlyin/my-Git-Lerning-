@@ -1,0 +1,17 @@
+如果你的文件名是中文的，在使用git status时会乱码。如下图所示：
+如果要使它显示为中文，在命令行里执行：git config --global core.quotepath false。
+再使用 git status：
+hhs key：
+SHA256:mRQ5nd8N9pn2+/hdSo/PwycWQnguVBJ9cUp12TEWxLY 2932600649@qq.com
+The key's randomart image is:
++---[RSA 3072]----+
+|        .o.+  =OO|
+|        o.+ o.=*+|
+|        .. = +o++|
+|       . oo + .Eo|
+|        S. +  . .|
+|          . o . .|
+|           . .o.o|
+|             .oX+|
+|             .++@|
++----[SHA256]-----+
