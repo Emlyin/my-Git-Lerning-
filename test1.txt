@@ -1,0 +1,77 @@
+2023.4.5学习Git第一天，复制一下c#的作业。
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Test4_3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        Books[] bs=new Books[5];                         //创建Books型数组存放图书信息
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {                                              //cbbType.SelectedIndex表示组合框中选择的项，第一项索引值为0
+            Type type = cbbType.SelectedIndex == 0 ? Type.Computer : Type.Novel;
+            double price=double.Parse(txtPrizce.Text);
+            string title=txtTitle.Text;
+            bs[Books.count]=new Books(title,type,price);     //Books.count为当前图书数目，以此为索引号，并创建新的Books对象
+            Books.count++;                                        //获取成功，数目加一
+            lblShow.Text = string.Format("成功添加{0}本书\n书名：{1}" +
+                "\n类型：{2}\n价格：{3}",Books.count, title, type, price);
+        }
+
+        private void btnCount_Click(object sender, EventArgs e)
+        {
+            lblShow.Text = string.Format("计算机类图书总量：{0}\n小说类图书总量：{1}\n"
+                + "图书的名单：\n", Books.NumComputer(), Books.NumNovel);
+            foreach(Books b in bs)
+            {
+                if (b != null)
+                    lblShow.Text += String.Format("{0}\n", b.Title);
+            }
+        }
+    }
+}
+public enum Type { Computer,Novel};
+public class Books
+{
+    private static int computer,novel;   //私有静态字段，存放书籍数目
+    public static int count;             //公有静态字段，统计数目
+    private string title;                          //类字段一般设置为私有
+    private Type type;
+    private double price;
+    public string Title                   //title属性设置
+    {
+        get { return title; }
+        set { title = value; }
+    }
+    public double Price              //price属性设置
+    {
+        get { return price; }
+        set { price = value; }
+    }
+    public Books(string title, Type type, double price)     //构造函数初始化对象
+    {
+        this.title = title;
+        this.type = type;
+        this.price = price;
+        if (type == Type.Computer) computer++;
+        if(type == Type.Novel) novel++;
+    }
+    public static int NumComputer()               //静态方法，返回图书数量
+    {
+        return computer;
+    }
+    public static int NumNovel => novel;
+}
