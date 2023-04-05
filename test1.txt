@@ -1,4 +1,5 @@
-2023.4.5学习Git第一天，复制一下c#的作业。
+2023.4.5学习Git第一天，清明节晚自习，复制一下c#的作业。
+哎，随便写点凑数
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
