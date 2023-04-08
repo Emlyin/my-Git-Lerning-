@@ -1,0 +1,179 @@
+# my-Git-Lerning-
+it is a test.
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence
+$ git init
+Initialized empty Git repository in D:/C++/数据结构/SqStack and Cyquence/.git/
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        SqStack and Cyquence.sln
+        SqStack and Cyquence.vcxproj
+        SqStack and Cyquence.vcxproj.filters
+        SqStack and Cyquence.vcxproj.user
+        SqStack.h
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git add -A
+error: open(".vs/SqStack and Cyquence/v17/Browse.VC.opendb"): Permission denied
+error: unable to index file '.vs/SqStack and Cyquence/v17/Browse.VC.opendb'
+fatal: adding files failed
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        SqStack and Cyquence.sln
+        SqStack and Cyquence.vcxproj
+        SqStack and Cyquence.vcxproj.filters
+        SqStack and Cyquence.vcxproj.user
+        SqStack.h
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git add -A
+error: open(".vs/SqStack and Cyquence/v17/Browse.VC.opendb"): Permission denied
+error: unable to index file '.vs/SqStack and Cyquence/v17/Browse.VC.opendb'
+fatal: adding files failed
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ touch .gitigonre
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git add -A
+error: open(".vs/SqStack and Cyquence/v17/Browse.VC.opendb"): Permission denied
+error: unable to index file '.vs/SqStack and Cyquence/v17/Browse.VC.opendb'
+fatal: adding files failed
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git add -A
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitattributes
+        new file:   .gitignore
+        new file:   SqStack and Cyquence.sln
+        new file:   SqStack and Cyquence.vcxproj
+        new file:   SqStack and Cyquence.vcxproj.filters
+        new file:   SqStack.h
+
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git commit -m"1.0"
+[master (root-commit) e4f23cc] 1.0
+ 6 files changed, 718 insertions(+)
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 SqStack and Cyquence.sln
+ create mode 100644 SqStack and Cyquence.vcxproj
+ create mode 100644 SqStack and Cyquence.vcxproj.filters
+ create mode 100644 SqStack.h
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (master)
+$ git remote add origin https://github.com/Emlyin/SqStack.git
+git branch -M main
+git push -u origin main
+fatal: unable to access 'https://github.com/Emlyin/SqStack.git/': SSL certificate problem: unable to get local issuer certificate
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ git commit -m "1.0"
+On branch main
+nothing to commit, working tree clean
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ git log
+commit e4f23cc974b03866413c1d84ddc01f8689441697 (HEAD -> main)
+Author: emlyn <2932600649@qq.com>
+Date:   Sat Apr 8 15:56:01 2023 +0800
+
+    1.0
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ ssh-keygen -t rsa -C "2932600649@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/XXI/.ssh/id_rsa):
+/c/Users/XXI/.ssh/id_rsa already exists.
+Overwrite (y/n)?
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ ssh-keygen -t rsa -C "2932600649@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/XXI/.ssh/id_rsa):
+/c/Users/XXI/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/XXI/.ssh/id_rsa
+Your public key has been saved in /c/Users/XXI/.ssh/id_rsa.pub
+The key fingerprint is:
+-+
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ clip < ~/.ssh/id_rsa.pub
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ ssh -T git@github.com
+Hi Emlyin! You've successfully authenticated, but GitHub does not provide shell access.
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ git remote add origin git@github.com:Emlyin/SqStack.git
+git branch -M main
+git push -u origin main
+error: remote origin already exists.
+fatal: unable to access 'https://github.com/Emlyin/SqStack.git/': SSL certificate problem: unable to get local issuer certificate
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$  git remote add origin git@github.com:Emlyin/SqStack.git
+error: remote origin already exists.
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ git remote rm origin
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$  git remote add origin git@github.com:Emlyin/SqStack.git
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ git branch -M main
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ git push -u origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 6.44 KiB | 6.44 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Emlyin/SqStack.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$ git push
+Everything up-to-date
+
+XXI@XXI MINGW64 /d/C++/数据结构/SqStack and Cyquence (main)
+$
